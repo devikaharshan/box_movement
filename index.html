@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p#one {
+  border-style: solid;
+  border-color: red;
+  width:50px;
+  left: 0px;
+  position: absolute;
+}
+
+
+</style>
+</head>
+<body>
+
+<h2>The border-color Property</h2>
+<p>This property specifies the color of the four borders:</p>
+
+<p id="one">A solid red border</p>
+
+<p><b>Note:</b> </p>
+
+</body>
+</html>
+<script>
+	var y=0,secs=0;
+	function move(){
+        	if(secs<900){
+                document.getElementById("one").style.left = y +"px";
+				y=y+1;
+				secs++;
+                setTimeout(function(){ move(); }, 20);
+            }
+            else{
+                clearTimeout();
+                
+            }
+
+        }
+		move();
+</script>
